@@ -24,49 +24,49 @@ javadoc { options.encoding = 'UTF-8' }
 
 // artifacts { archives sourcesJar, javadocsJar, testsJar }
 
-// publishing {
-//     publications {
-//         maven(MavenPublication) {
-//             from components.java
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
 
-//             artifact sourcesJar
-//             artifact javadocsJar
-//             artifact testsJar
+            artifact sourcesJar
+            artifact javadocsJar
+            artifact testsJar
 
-//             pom {
-//                 name = project.name
-//                 description.set(project.provider({ project.description }))
-//                 url = 'https://web3j.io'
+        //     pom {
+        //         name = project.name
+        //         description.set(project.provider({ project.description }))
+        //         url = 'https://web3j.io'
 
-//                 licenses {
-//                     license {
-//                         name = 'The Apache License, Version 2.0'
-//                         url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//                     }
-//                 }
+        //         licenses {
+        //             license {
+        //                 name = 'The Apache License, Version 2.0'
+        //                 url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+        //             }
+        //         }
 
-//                 scm {
-//                     def slug = rootProject.name
-//                     if (project.hasProperty('rootProjectOverride')) {
-//                         slug = project.rootProjectOverride
-//                     }
+        //         scm {
+        //             def slug = rootProject.name
+        //             if (project.hasProperty('rootProjectOverride')) {
+        //                 slug = project.rootProjectOverride
+        //             }
 
-//                     url = "https://github.com/web3j/$slug"
-//                     connection = "scm:https://github.com/web3j/${slug}.git"
-//                     developerConnection = "scm:git://github.com/web3j/${slug}.git"
-//                 }
+        //             url = "https://github.com/web3j/$slug"
+        //             connection = "scm:https://github.com/web3j/${slug}.git"
+        //             developerConnection = "scm:git://github.com/web3j/${slug}.git"
+        //         }
 
-//                 developers {
-//                     developer {
-//                         id = 'conor10'
-//                         name = 'Conor Svensson'
-//                         email = 'conor10@gmail.com'
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+        //         developers {
+        //             developer {
+        //                 id = 'conor10'
+        //                 name = 'Conor Svensson'
+        //                 email = 'conor10@gmail.com'
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}
 
 // nexusPublishing {
 //     repositories {
