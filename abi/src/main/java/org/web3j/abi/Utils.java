@@ -12,18 +12,6 @@
  */
 package org.web3j.abi;
 
-import org.web3j.abi.datatypes.DynamicArray;
-import org.web3j.abi.datatypes.DynamicBytes;
-import org.web3j.abi.datatypes.Fixed;
-import org.web3j.abi.datatypes.Int;
-import org.web3j.abi.datatypes.StaticArray;
-import org.web3j.abi.datatypes.StaticStruct;
-import org.web3j.abi.datatypes.StructType;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Ufixed;
-import org.web3j.abi.datatypes.Uint;
-import org.web3j.abi.datatypes.Utf8String;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -35,6 +23,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.web3j.abi.datatypes.DynamicArray;
+import org.web3j.abi.datatypes.DynamicBytes;
+import org.web3j.abi.datatypes.Fixed;
+import org.web3j.abi.datatypes.Int;
+import org.web3j.abi.datatypes.StaticArray;
+import org.web3j.abi.datatypes.StaticStruct;
+import org.web3j.abi.datatypes.StructType;
+import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.Ufixed;
+import org.web3j.abi.datatypes.Uint;
+import org.web3j.abi.datatypes.Utf8String;
 
 /** Utility functions. */
 public class Utils {
@@ -201,9 +201,7 @@ public class Utils {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Ports {@link java.lang.reflect.Type#getTypeName()}.
-     */
+    /** Ports {@link java.lang.reflect.Type#getTypeName()}. */
     public static String getTypeName(java.lang.reflect.Type type) {
 
         try {
@@ -213,10 +211,7 @@ public class Utils {
         }
     }
 
-    /**
-     * Support java version < 8
-     * Copied from {@link Class#getTypeName()}.
-     */
+    /** Support java version < 8 Copied from {@link Class#getTypeName()}. */
     private static String getClassName(Class type) {
 
         if (type.isArray()) {
@@ -240,5 +235,4 @@ public class Utils {
 
         return type.getName();
     }
-
 }
