@@ -20,6 +20,7 @@ import java.util.regex.Pattern;
 import org.web3j.abi.datatypes.AbiTypes;
 import org.web3j.abi.datatypes.DynamicArray;
 import org.web3j.abi.datatypes.StaticArray;
+import org.web3j.abi.Utils;
 
 /**
  * Type wrapper to get around limitations of Java's type erasure. This is so that we can pass around
@@ -91,7 +92,7 @@ public abstract class TypeReference<T extends org.web3j.abi.datatypes.Type>
         if (getType() instanceof ParameterizedType) {
             return (Class<T>) ((ParameterizedType) clsType).getRawType();
         } else {
-            return (Class<T>) Class.forName(clsType.getTypeName());
+            return (Class<T>) Class.forName(Utils.getTypeName(clsType));
         }
     }
 
